@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Test redeploy.<code> Go go go!</code>
+          Change text in another branch.<code> Go go go!</code>
         </p>
         <a
           className="App-link"
