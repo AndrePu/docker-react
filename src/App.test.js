@@ -9,6 +9,6 @@ test('renders learn to develop link', () => {
 
 test('renders go go go text', () => {
   render(<App />);
-  const linkElement = screen.getByText(/go go go1/i);
+  const linkElement = screen.getByText(/go go go/i);
   expect(linkElement).toBeInTheDocument();
 });
