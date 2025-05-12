@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    # Build on PRs targeting master
+    branches:
+      - master
  
 jobs:
   build:
@@ -17,6 +21,7 @@ jobs:
         run: zip -r deploy.zip . -x '*.git*'
  
       - name: Deploy to EB
+        if: github.event_name == 'push'
         uses: einaregilsson/beanstalk-deploy@v21
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
